@@ -30,7 +30,9 @@ SET /a "rnum= (%RANDOM% %% 300)+10"
 
 ::rng for file pick 
 set /a "randf=(%RANDOM% %% filecount)+1"
-
+::rng for file name 
+SET /a "randfn= (%RANDOM% %% 30000)+1"
+Set randfnc=%randfn%.vbs
 ::pick random file name from array
 for /F "tokens=*" %%a in ("!file%randf%!") do set "idp=%%a"
  
@@ -39,18 +41,18 @@ cd %Path1%
 echo %DATE% + %TIME% + %idp% >> "Sounds.log"
 :: create vbscrip file to run Wmplayer.exe hidden wsing vbscript
 ::Jank ass bullshit 
-echo Dim oPlayer >> osp.vbs
-echo Set oPlayer = CreateObject("WMPlayer.OCX") >> osp.vbs
-echo oPlayer.URL = "C:\windows\media\%idp%" >> osp.vbs
-echo oPlayer.settings.volume = 100 >> osp.vbs
-echo oPlayer.controls.play >> osp.vbs
-echo WScript.Sleep 10000 >> osp.vbs
-echo oPlayer.close >> osp.vbs
-echo Set oPlayer = Nothing >> osp.vbs
+echo Dim oPlayer >> %randfnc%
+echo Set oPlayer = CreateObject("WMPlayer.OCX") >> %randfnc%
+echo oPlayer.URL = "C:\windows\media\%idp%" >> %randfnc%
+echo oPlayer.settings.volume = 100 >> %randfnc%
+echo oPlayer.controls.play >> %randfnc%
+echo WScript.Sleep 10000 >> %randfnc%
+echo oPlayer.close >> %randfnc%
+echo Set oPlayer = Nothing >> %randfnc%
 
-start osp.vbs 
-timeout 30
-del osp.vbs
+start %randfnc% 
+timeout 15
+del %randfnc%
 
 GOTO MAIN
 
