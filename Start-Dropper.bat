@@ -1,10 +1,5 @@
 @echo off 
 cd \
-cd %userprofile%\documents
-if exist %userprofile%\documents\entr.bat(
-    del  %userprofile%\documents\entr.bat
-)
-cd \ 
 if not exist %userprofile%\documents\"Windows Sound Host" ( 
     mkdir "Windows Sound Host"
 )
