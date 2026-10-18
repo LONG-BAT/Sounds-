@@ -17,7 +17,7 @@ setlocal enabledelayedexpansion
 
 set filecount=0
 
-::file name array 
+::file name "array" 
 pushd "%media%"
 for %%f in (*.wav) do (
     set /a filecount+=1
